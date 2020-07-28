@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "1bec353f-8aa5-49c5-b829-51a0f4f43c4a",
+		"name": "TestApiCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Person",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"firstName\" : \"test1First\",\n \"lastName\" : \"test1Last\",\n \"phoneNumber\" : \"111222333\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44347/api/person/add",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44347",
+					"path": [
+						"api",
+						"person",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Person",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44347/api/person/get?id=19bc767f-d91d-443c-ac59-570072f758d8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44347",
+					"path": [
+						"api",
+						"person",
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "19bc767f-d91d-443c-ac59-570072f758d8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Person",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44347/api/person/getall",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44347",
+					"path": [
+						"api",
+						"person",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Person",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"id\": \"77e4a8f4-1cc4-497c-9146-0e3fa370ef35\",\n \"firstName\" : \"test1111First\",\n \"lastName\" : \"test11Last\",\n \"phoneNumber\" : \"111222333\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44347/api/person/update",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44347",
+					"path": [
+						"api",
+						"person",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Person",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44347/api/person/remove?id=19bc767f-d91d-443c-ac59-570072f758d8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44347",
+					"path": [
+						"api",
+						"person",
+						"remove"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "19bc767f-d91d-443c-ac59-570072f758d8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bills By Person Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44347/api/bill/getBillsByPersonId?id=107c52f0-b882-4b74-ad9e-506616e1e05a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44347",
+					"path": [
+						"api",
+						"bill",
+						"getBillsByPersonId"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "107c52f0-b882-4b74-ad9e-506616e1e05a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bill Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"amount\" : 33.4,\n \"title\" : \"title1\",\n \"dateTime\" : \"28.07.2020 10:00 AM\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44347/api/bill/add?personId=107c52f0-b882-4b74-ad9e-506616e1e05a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44347",
+					"path": [
+						"api",
+						"bill",
+						"add"
+					],
+					"query": [
+						{
+							"key": "personId",
+							"value": "107c52f0-b882-4b74-ad9e-506616e1e05a"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
